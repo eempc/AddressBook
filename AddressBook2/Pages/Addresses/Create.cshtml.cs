@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using AddressBook2.Data;
+﻿using AddressBook2.Data;
 using AddressBook2.Models;
 using Microsoft.AspNetCore.Authorization;
-
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace AddressBook2.Pages.Addresses {
     [Authorize]
     public class CreateModel : PageModel {
-        private readonly AddressBook2.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         // Attempts to find out who is the logged in user and their details
         public string userId;
